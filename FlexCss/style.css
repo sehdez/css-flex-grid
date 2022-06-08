@@ -1,0 +1,37 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-size: 4rem;
+    font-family: sans-serif;
+    background-color: #1d1818;
+}
+
+.flex-container {
+    background: #404040;
+    border-radius: 10px;
+    border: solid 2px yellow;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 99vh;
+}
+.flex-container > * {
+    background-color: #f18c55;
+    border-radius: 10px;
+    border: 1px solid #f18c55;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+
+/* 
+    flex-wrap: wrap -> cuando el contenedor no tiene espacio, manda los elementos a la siguiente línea
+    flex-wrap: nowrap -> los elementos se mantienen en una misma linea
+    align-content -> solo funciona con flex-wrap: wrap
+    flex: 1 -> utilizarlo en los elementos.
+
+*/

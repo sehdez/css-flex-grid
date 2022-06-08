@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+
+body{
+    background-color: #000;
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+
+.grid-container > * {
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.header {
+    grid-area: header;
+    background-color: blue;
+}
+.navbar {
+    grid-area: navbar;
+    background-color: gray ;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: lightblue;
+}
+.footer {
+    grid-area: footer;
+    background-color: pink;
+}
+
+.main {
+    grid-area: main;
+    background-color: red ;
+    overflow: auto;
+    
+}
+
+.grid-container {
+    max-height: 600px;
+    display: grid;
+    gap: 5px;
+    grid-template: 
+        "header"  100px
+        "navbar"  50px
+        "main"    450px
+        "sidebar" 100px
+        "footer"  50px ;
+}
+.card {
+    border: solid 1px blue;
+    width: 100%;
+    display: inline-block;
+    border-radius: 10px;
+
+}
+.card img {
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .grid-container {
+        /* grid-template-columns: 200px auto;
+        grid-template-rows: 100px 50px auto 100px;
+        grid-template-areas: 
+        "header   header"
+        "navbar   navbar"
+        "sidebar  main"
+        "footer   footer"; */
+        /* Si se requiere una columna vacía sólo se pone un punto ejemplo */
+        /* ".   header"  100px */
+        grid-template: 
+            "header   header"  100px
+            "navbar   navbar"  50px
+            "sidebar  main  "  450px
+            "footer   footer"  50px
+            /20% auto ;
+    }
+    .card {
+        border: solid 1px blue;
+        width: 48%;
+        display: inline-block;
+    }
+    .card img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 900px) {
+    .grid-container {
+        grid-template: 
+        "header   header   header"  100px
+        "navbar   main     sidebar" 750px
+        "footer   footer   footer"  50px
+        /20% auto  20%;
+        max-height: 600px;
+    }
+        .card {
+            border: solid 1px blue;
+            width: 31%;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        .card img {
+            width: 100%;
+        }
+    }
+    
+
+
+
+
