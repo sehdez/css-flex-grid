@@ -1,1 +1,1 @@
-# Este repositorio es una ayuda para maquetación con FLex y Grid de css
+# Este repositorio es una ayuda para maquetación con Flex y Grid de css
