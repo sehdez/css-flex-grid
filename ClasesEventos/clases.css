@@ -1,0 +1,22 @@
+/* Imagen de fondo */
+.div {
+    background-image: url("./assets/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}  
+
+Menu Arriba
+.menu {
+    z-index: 2;
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 0px;
+    height: 100%;
+    transition: width 0.7s ease;
+}
